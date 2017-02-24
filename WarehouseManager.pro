@@ -26,11 +26,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         warehousemanager.cpp \
-    logindlg.cpp
+    logindlg.cpp \
+    newproductdialog.cpp \
+    newclientdialog.cpp \
+    selldialog.cpp
 
 HEADERS  += warehousemanager.h \
     connection.h \
-    logindlg.h
+    logindlg.h \
+    configfile.h \
+    newproductdialog.h \
+    newclientdialog.h \
+    selldialog.h
 
 FORMS    += warehousemanager.ui \
-    logindlg.ui
+    logindlg.ui \
+    newproductdialog.ui \
+    newclientdialog.ui \
+    selldialog.ui

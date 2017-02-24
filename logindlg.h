@@ -20,8 +20,14 @@ private slots:
 
     void on_cancelBtn_clicked();
 
+    void on_configBtn_clicked();
+
+    void on_setParametesBtn_clicked();
+
 private:
     Ui::LoginDlg *ui;
+    bool ishide;
+    void updateConfig();
 };
 
 #endif // LOGINDLG_H

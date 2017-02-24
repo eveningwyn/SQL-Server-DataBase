@@ -4,6 +4,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include "logindlg.h"
+#include "configfile.h"
 
 #include <QDebug>
 
@@ -11,13 +12,15 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    QSqlDatabase db;                            //保存所连接的数据库对象
-    QString hostName = QString("A0601020160");  //服务器名称
-    QString databaseName = QString("dbtemp");   //数据库名称
-    QString uid = QString("testUser");          //登录名
-    QString pwd = QString("123456");            //登录密码
+    QString hostName;//服务器名称
+    QString databaseName;//数据库名称
+    QString uid;//登录名
+    QString pwd;//登录密码
+    configOut(hostName,databaseName,uid,pwd);
+
+    QSqlDatabase db;//保存所连接的数据库对象
     if(!createConnection(hostName,databaseName,uid,pwd,db))
-        return -1;
+    {}
 
     WarehouseManager w;
     LoginDlg dlg;
